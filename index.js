@@ -6,14 +6,13 @@
 // If a character is already lowercase, or if it is a special character, ignore it.
 
 const strToLower = (text) => {
-    let splitWord = text.split('');
-    for (let i = 0; i < splitWord.length; i++) {
-        let charCode = text.charCodeAt(i)
-        if (charCode > 64 && charCode < 91) {
-            splitWord[i] = String.fromCharCode(charCode + 32)
-        }
+    let arr = text.split('');
+    for (i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charCodeAt()
+        arr[i] >= 65 && arr[i] <= 90 ? arr[i] += 32 : arr[i]
+        arr[i] = String.fromCharCode(arr[i]);
     }
-    return splitWord.join('')
+    return arr.join('');
 }
 
 console.log(strToLower('aAbBCc'));
